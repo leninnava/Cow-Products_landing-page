@@ -94,37 +94,50 @@ body {
 /* Header*/
 
 .header {
-    background: linear-gradient(to left bottom, rgba(238, 135, 87, 0.801), rgba(151, 199, 230, 0)), url(img/stijn-te-strake-316914-unsplash.jpg);
+    background: linear-gradient(to left bottom, rgba(238, 135, 87, 0.6), rgba(151, 199, 230, 0)), url(img/stijn-te-strake-316914-unsplash.jpg);
     background-size: cover;
-    display: flex;
-    flex-flow: column;
-    justify-content: space-evenly;
-    align-items: center;
+    display: grid;
     height: 100vh;
+    place-content: center;
 }
 
 .header-element {
-    display: flex;
-    height: 90vh;
-    justify-content: center;
-    align-items: center;
+    display: grid;
+    height: 80vh;
+    place-content: center;
+    width: 50vw;
 }
 
 .header-text {
     font-family: "Merriwheater", serif;
     color: var(--header-white);
     font-weight: 500;
-    padding: 40px;
     font-size: 2.2rem;
     /*! box-shadow: 1px 10px 40px 1px rgba(0, 0, 0, 0.3); */
+    padding-left: 1rem;
+}
+
+.main-link-arrow {
+    display: grid;
+    place-content: center;
 }
 
 .arrow {
     height: auto;
-    width: 25px;
-    padding-bottom: 10px;
+    width: 30px;
+    animation-name: beat;
+    animation-duration: 4s;
+    animation-iteration-count: infinite;
 }
 
+@keyframes beat {
+    0% {
+      transform: scale(1);
+    }
+    50% {
+      transform: scale(0.8);
+    }
+  }
 /* Other */
 
 
