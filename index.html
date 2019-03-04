@@ -7,30 +7,30 @@
     <title>Cow Product</title>
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="stylesheet" type="text/css" media="screen" href="main.css" />
-    <script src="main.js"></script>
-    <link href="https://fonts.googleapis.com/css?family=Lato|Merriwheather|Pacifico" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Oswald|Playfair+Display|Pacifico" rel="stylesheet">
 </head>
 
 <body>
     <header id="header">
         <div class="navbar" id="navbar">
-            <div class="navbar-section navbar-left" id="left-navbar">
-                <img class="logo" src="img/003-cow-silhouette.svg" alt="">
-                <a class="logo-link" href="">Cow Products</a>
+            <div class="navbar__section" id="navbar__left">
+                <img class="navbar__logo" src="img/003-cow-silhouette.svg" alt="">
+                <a class="navbar__left__text" href="">Cow Products</a>
             </div>
-            <div class="navbar-section navbar-right" id="right-navbar">
-                <a class="nav-link nav-button" href="">How (cows) work</a>
-                <a class="nav-link nav-button" href="">Products</a>
-                <a class="nav-link nav-button" href="">Get in touch</a>
+            <div class="navbar__section navbar__section-right" id="navbar__right">
+                <a class="btn" href="">How (cows) work</a>
+                <a class="btn" href="">Products</a> 
+                <a class="btn" href="">Get in touch</a>
             </div>
         </div>
         <div class="header" id="header-main">
-            <div class="header-element" id="header-text">
-                <h1 class="header-text header-primary-text">Don't you <strong>love</strong></h1>
-                <h2 class="header-text header-sub-text">the smell of <strong>cow turd</strong></h2>
-                <h2 class="header-text header-sub-sub-text">in the morning.</h2>
-                <hr class="header-hr">
-            </div>
+            
+                <h1 class="header__element" id="header-text">
+                <span class="header__text header__text--sub"> Don't you <strong>love</strong></span>
+                <span class="header__text header__text--primary">the smell of <strong>cow turd</strong></span>
+                <span class="header__text header__text--primary"> in the morning.</span>
+                </h1>
+            
             <a class="main-link-arrow" href="#main"> <img class="arrow" src="img/down-arrow.svg" alt=""></a>
         </div>
 
@@ -48,7 +48,6 @@
 
     </footer>
 </body>
-
+<script src="app.js"></script>
 <!-- <script src="https://cdn.freecodecamp.org/testable-projects-fcc/v1/bundle.js"></script> -->
-
 </html>

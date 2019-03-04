@@ -1,9 +1,5 @@
 /* General */
 
-html {
-    box-sizing: border-box;
-}
-
 *,
 *:before,
 *:after {
@@ -12,147 +8,142 @@ html {
     box-sizing: inherit;
 }
 
+html {
+    box-sizing: border-box;
+    /* Change root font size to 10px - 6.25% */
+}
+
 body {
-    font-family: "Lato", sans-serif;
-    background-color: #2C7CB0;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
 }
 
 
 /* Variables */
 :root {
-
-    --header-white: rgba(255, 255, 255, 0.801);
-
+    --header-white: rgb(255, 255, 255);
 }
+
 
 /* Navbar */
 
+
 .navbar {
     background-color: transparent;
-    height: 6rem;
     position: fixed;
-    width: 100vw;
     display: flex;
     justify-content: space-between;
-    align-items: center;
+    height: 5rem;
+    width: 100vw;
 }
 
-.navbar-section {
+.navbar__section {
     display: flex;
-    justify-content: center;
     align-items: center;
-}
-
-
-.navbar-left {
-    width: auto;
-}
-
-.navbar-right {
-    width: auto;
     height: auto;
-    margin-right: 1.5rem;
 }
 
-.nav-button {
+.btn {
     text-decoration: none;
     font-size: 1rem;
-    font-weight: 600;
     color: var(--header-white);
-    margin: 1.5rem;
     white-space: nowrap;
+    height: auto;
+    padding: 1.5rem;
 }
 
-.logo-link {
+.btn::after {
+    content: "";
+    display: block;
+    position: relative;
+    background: var(--header-white);
+    width: 100%;
+    transition: width .5s ease-in;
+    top: 5px;
+    height: 1px;
+}
+
+.btn:hover::after {
+    width: 0%;
+    transition: width 0.5s ease-out;
+}
+
+
+.navbar__left__text {
     font-size: 1.6em;
     font-family: 'Pacifico', cursive;
-    color: var(--header-white); 
+    color: var(--header-white);
     text-decoration: none;
 }
 
-@media (max-width: 640px) {
-    .logo-link {
-        display: none;
-    }
-}
 
-.logo {
-    height: 50px;
-    width: 50px;
+.navbar__logo {
+    width: 3.1300rem;
     margin: 1.5rem;
 }
-
-
-
-/* Navbar hovers */
-
-.nav-button:hover {
-    color: #fff;
-    border-bottom: solid var(--header-white) 2px;
-    transition: cubic-bezier(0.39, 0.575, 0.565, 1) 0.150s;
-}
-
 
 
 /* Header*/
 
+
+
 .header {
-    background: linear-gradient(to left bottom, rgba(134, 42, 0, 0.9), rgba(151, 199, 230, 0)), url(img/stijn-te-strake-316914-unsplash.jpg);
+    background: linear-gradient(to right bottom,
+        rgba(134, 42, 0, 0.8),
+        rgba(82, 26, 0, 0.8)),
+        url(img/stijn-te-strake-316914-unsplash.jpg);
     background-size: cover;
+    background-position: left top;
     display: grid;
-    height: 100vh;
+    height: 90vh;
     place-content: center;
 }
 
-.header-element {
+.header__element {
     display: grid;
-    height: 85vh;
+    height: 70vh;
     place-content: center;
     width: auto;
 }
 
-.header-primary-text {
-    font-size: 3.3rem;
-}
-
-.header-sub-text {
-    font-size: 5rem;
-}
-
-.header-sub-sub-text {
-    font-size: 4rem;
-}
-
-.header-hr {
-    width: 35rem;
-    background-color: var(--header-white);
-    color: var(--header-white);
-    margin-top: 2.5rem;
-    border: var(--header-white) solid 1.5px;
+.header__element::after {
+    content: "";
+    position: relative;
+    border-bottom: solid 2px var(--header-white);
+    width: 20rem;
+    padding-bottom: 2rem;
     justify-self: center;
 }
 
-.header-text {
-    font-family: "Merriwheater", serif;
+.header__text {
+    font-family: "Playfair Display", serif;
     color: var(--header-white);
     font-weight: 500;
     text-align: center;
-    /*! box-shadow: 1px 10px 40px 1px rgba(0, 0, 0, 0.3); */
-    padding-left: 1rem;
+    white-space: nowrap;
+}
+
+.header__text--primary {
+    display: block;
+    font-size: 3.3rem;
+}
+
+.header__text--sub {
+    font-size: 5rem;
+    display: block;
 }
 
 .main-link-arrow {
-    display: grid;
-    place-content: center;
+    justify-self: center;
 }
 
 .arrow {
     height: auto;
     width: 30px;
-    animation-name: beat;
-    animation-duration: 4s;
-    animation-iteration-count: infinite;
+    animation: beat 5s infinite;
 }
+
+
+/* Animations */
 
 @keyframes beat {
     0% {
@@ -164,7 +155,39 @@ body {
     }
 }
 
+/* Media queries */
+
+/* General media queries */
+
+@media (max-width: 720px) {
+
+    .logo-link,
+    .navbar__section-right {
+        display: none;
+    }
+
+    :root {
+        font-size: 12px;
+    }
+}
+
+@media (max-width: 480px) {
+
+    .logo {
+        width: 3.5em;
+    }
+
+    :root {
+        font-size: 10px;
+    }
+}
+
+
 /* Other */
 
 
-/* Media queries */
+.navbar__section-toggle {
+    display: flex;
+    flex-flow: column;
+    align-items: end;
+}
