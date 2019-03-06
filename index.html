@@ -7,41 +7,44 @@
     <title>Cow Product</title>
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="stylesheet" type="text/css" media="screen" href="main.css" />
-    <link href="https://fonts.googleapis.com/css?family=Oswald|Playfair+Display|Pacifico" rel="stylesheet">
 </head>
 
 <body>
     <header id="header">
-        <div class="navbar" id="navbar">
-            <div class="navbar__section" id="navbar__left">
-                <img class="navbar__logo" src="img/003-cow-silhouette.svg" alt="">
-                <a class="navbar__left__text" href="">Cow Products</a>
-            </div>
-            <div class="navbar__section navbar__section-right" id="navbar__right">
-                <a class="btn" href="">How (cows) work</a>
-                <a class="btn" href="">Products</a> 
-                <a class="btn" href="">Get in touch</a>
-            </div>
-        </div>
         <div class="header" id="header-main">
-            
-                <h1 class="header__element" id="header-text">
+                <div class="navbar" id="navbar">
+                        <div class="navbar__section" id="navbar__left">
+                            <a class="navbar__left__text" href="">The Cowpenning</a>
+                            <img class="navbar__logo" src="img/003-cow-silhouette.svg" alt="">
+                            
+                        </div>
+                        <div class="navbar__section navbar__section-right" id="navbar__right">
+                            <a class="btn" href="">How cows work</a>
+                            <a class="btn" href="">Products (from cows)</a>
+                            <a class="btn" href="">Get in touch (not with cows)</a>
+                        </div>
+                    </div>
+             
+            <h1 class="header__element" id="header-text">
                 <span class="header__text header__text--sub"> Don't you <strong>love</strong></span>
                 <span class="header__text header__text--primary">the smell of <strong>cow turd</strong></span>
                 <span class="header__text header__text--primary"> in the morning.</span>
-                </h1>
-            
-            <a class="main-link-arrow" href="#main"> <img class="arrow" src="img/down-arrow.svg" alt=""></a>
+            </h1>
+
+            <a class="arrow" href="#main"> <img class="arrow__img" src="img/down-arrow.svg" alt=""></a>
         </div>
-
-
-
     </header>
 
-    <main id="main">
-        <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Libero impedit asperiores totam veritatis numquam
-            laboriosam dolorum alias iure maxime! Nisi vitae mollitia reiciendis sit, molestiae consequuntur porro
-            distinctio adipisci illum.</p>
+    <main class="main" id="main">
+        <div class="main__section">
+            <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Libero impedit asperiores totam veritatis
+                numquam
+                laboriosam dolorum alias iure maxime! Nisi vitae mollitia reiciendis sit, molestiae consequuntur porro
+                distinctio adipisci illum.</p>
+        </div>
+        <div class="main__section">
+
+        </div>
     </main>
 
     <footer>
@@ -50,4 +53,5 @@
 </body>
 <script src="app.js"></script>
 <!-- <script src="https://cdn.freecodecamp.org/testable-projects-fcc/v1/bundle.js"></script> -->
+
 </html>

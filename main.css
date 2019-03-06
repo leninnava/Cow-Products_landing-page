@@ -1,5 +1,28 @@
 /* General */
 
+
+/*   
+*** Primary color:   
+
+   shade 0 = #521A00 = rgb( 82, 26,  0) = rgba( 82, 26,  0,1) = rgb0(0.322,0.102,0)
+   shade 1 = #A65936 = rgb(166, 89, 54) = rgba(166, 89, 54,1) = rgb0(0.651,0.349,0.212)
+   shade 2 = #793313 = rgb(121, 51, 19) = rgba(121, 51, 19,1) = rgb0(0.475,0.2,0.075)
+   shade 3 = #300F00 = rgb( 48, 15,  0) = rgba( 48, 15,  0,1) = rgb0(0.188,0.059,0)
+   shade 4 = #150700 = rgb( 21,  7,  0) = rgba( 21,  7,  0,1) = rgb0(0.082,0.027,0)
+
+*** Complement color:
+
+   shade 0 = #003722 = rgb(  0, 55, 34) = rgba(  0, 55, 34,1) = rgb0(0,0.216,0.133)
+   shade 1 = #247054 = rgb( 36,112, 84) = rgba( 36,112, 84,1) = rgb0(0.141,0.439,0.329)
+   shade 2 = #0D5238 = rgb( 13, 82, 56) = rgba( 13, 82, 56,1) = rgb0(0.051,0.322,0.22)
+   shade 3 = #002114 = rgb(  0, 33, 20) = rgba(  0, 33, 20,1) = rgb0(0,0.129,0.078)
+   shade 4 = #000E09 = rgb(  0, 14,  9) = rgba(  0, 14,  9,1) = rgb0(0,0.055,0.035)
+
+
+*/
+
+@import url('https://fonts.googleapis.com/css?family=Oswald:300,400,700|Playfair+Display:400,700,900');
+
 *,
 *:before,
 *:after {
@@ -10,17 +33,22 @@
 
 html {
     box-sizing: border-box;
-    /* Change root font size to 10px - 6.25% */
+    font-size: 62.5%;
 }
 
 body {
-    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    font-family: "Oswald", sans-serif;
 }
 
 
 /* Variables */
 :root {
     --header-white: rgb(255, 255, 255);
+    --brown-lighter: rgb(166, 89, 54);
+    --brown-light: rgb(121, 51, 19);
+    --brown: rgb( 82, 26,  0);
+    --brown-dark: rgb( 48, 15,  0);
+    --brown-darker: rgb( 21,  7,  0);
 }
 
 
@@ -32,7 +60,7 @@ body {
     position: fixed;
     display: flex;
     justify-content: space-between;
-    height: 5rem;
+    height: 7rem;
     width: 100vw;
 }
 
@@ -40,15 +68,17 @@ body {
     display: flex;
     align-items: center;
     height: auto;
+    margin: 0 2rem;
 }
 
 .btn {
     text-decoration: none;
-    font-size: 1rem;
+    font-size: 1.6rem;
     color: var(--header-white);
     white-space: nowrap;
     height: auto;
-    padding: 1.5rem;
+    padding: 2.5rem;
+    font-weight: 100;
 }
 
 .btn::after {
@@ -58,8 +88,8 @@ body {
     background: var(--header-white);
     width: 100%;
     transition: width .5s ease-in;
-    top: 5px;
-    height: 1px;
+    top: .4rem;
+    height: .2rem;
 }
 
 .btn:hover::after {
@@ -69,16 +99,19 @@ body {
 
 
 .navbar__left__text {
-    font-size: 1.6em;
-    font-family: 'Pacifico', cursive;
+    font-weight: 100;
+    font-size: 2.4rem;
+    font-family: 'Oswald', serif;
+    text-transform: uppercase;
+    white-space: nowrap;
     color: var(--header-white);
     text-decoration: none;
 }
 
 
 .navbar__logo {
-    width: 3.1300rem;
-    margin: 1.5rem;
+    height: 5rem;
+    margin-left: 0.2rem;
 }
 
 
@@ -87,14 +120,11 @@ body {
 
 
 .header {
-    background: linear-gradient(to right bottom,
-        rgba(134, 42, 0, 0.8),
-        rgba(82, 26, 0, 0.8)),
-        url(img/stijn-te-strake-316914-unsplash.jpg);
+    background: linear-gradient(to right bottom, rgba(121, 51, 19, 0.84), rgb(82, 26, 0)), url(img/stijn-te-strake-316914-unsplash.jpg);
     background-size: cover;
     background-position: left top;
     display: grid;
-    height: 90vh;
+    height: 95vh;
     place-content: center;
 }
 
@@ -108,9 +138,9 @@ body {
 .header__element::after {
     content: "";
     position: relative;
-    border-bottom: solid 2px var(--header-white);
-    width: 20rem;
-    padding-bottom: 2rem;
+    border-bottom: solid 0.2rem var(--header-white);
+    width: 25rem;
+    padding-bottom: 3.2rem;
     justify-self: center;
 }
 
@@ -124,23 +154,31 @@ body {
 
 .header__text--primary {
     display: block;
-    font-size: 3.3rem;
+    font-size: 5.3rem;
 }
 
 .header__text--sub {
-    font-size: 5rem;
+    font-size:8rem;
     display: block;
 }
 
-.main-link-arrow {
+.arrow {
     justify-self: center;
 }
 
-.arrow {
+.arrow__img {
     height: auto;
-    width: 30px;
+    width: 3rem;
     animation: beat 5s infinite;
 }
+
+
+/* Main body */ 
+
+.main__section {
+        height: 90vh;
+    }
+
 
 
 /* Animations */
@@ -157,29 +195,38 @@ body {
 
 /* Media queries */
 
-/* General media queries */
 
 @media (max-width: 720px) {
 
-    .logo-link,
+    html {
+        font-size: 50%
+    }
+
+    .navbar__left__text,
     .navbar__section-right {
         display: none;
     }
 
-    :root {
-        font-size: 12px;
-    }
 }
 
 @media (max-width: 480px) {
 
-    .logo {
-        width: 3.5em;
+    html {
+        font-size: 40%
     }
 
-    :root {
-        font-size: 10px;
+    .logo {
+        width: 5.6em;
     }
+
+}
+
+@media (max-width: 320px) {
+
+    html {
+        font-size: 35%
+    }
+
 }
 
 
