@@ -1,0 +1,10 @@
+.grid-container {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr;
+    grid-template-areas: "Text-content Image-content";
+  }
+  
+  .Text-content { grid-area: Text-content; }
+  
+  .Image-content { grid-area: Image-content; }

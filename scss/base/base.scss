@@ -1,0 +1,35 @@
+// Base
+
+@import url('https://fonts.googleapis.com/css?family=Oswald:300,400,700|Playfair+Display:400,700,900');
+
+
+// Palette
+
+$color1: rgba(37, 22, 5, 1);
+$color2: rgba(244, 241, 187, 1);
+$color3: rgba(107, 43, 6, 1);
+$color4: rgba(219, 207, 192, 1);
+$color5: rgba(201, 138, 66, 1);
+
+
+*,
+*:before,
+*:after {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    font-size: 62.5%;
+}
+
+body {
+    font-family: "Playfair Display", serif;
+    background-color: $color4;
+}
+
+a {color: inherit;}
+
+
+

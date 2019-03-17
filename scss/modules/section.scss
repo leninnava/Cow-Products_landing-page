@@ -1,0 +1,15 @@
+.section {
+    height: 95vh;
+
+    &-header {
+        background: linear-gradient(to right bottom, rgba(107, 43, 6, 0.904), rgb(107, 43, 6)), url(img/stijn-te-strake-316914-unsplash.jpg);
+        background-size: cover;
+        background-position: left top;
+        color: $color2;
+        /* Buscar una variación más clara del color de linear-gradient para que sea visible superpuesta a la imágen. */
+    }
+
+    &-main {
+        background-color: $color1;
+    }
+}

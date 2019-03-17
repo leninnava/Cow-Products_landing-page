@@ -1,0 +1,24 @@
+.btn {
+    text-decoration: none;
+    font-size: 1.6rem;
+    white-space: nowrap;
+    height: auto;
+    padding: 2.5rem;
+    font-weight: 200;
+
+    &::after {
+        content: "";
+        display: block;
+        position: relative;
+        background-color: $color2;
+        width: 0%;
+        transition: width .3s ease-in;
+        top: .4rem;
+        height: .2rem;
+    }
+
+    &::hover::after {
+        width: 100%;
+        transition: width 0.3s ease-in;
+    }
+}

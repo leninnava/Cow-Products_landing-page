@@ -1,0 +1,33 @@
+// Fixed, flex-based navbar and navbar sections 
+//  (responsive's broken, will be fixed on new mobile-first media queries rewrite)
+
+.navbar {
+    background-color: transparent;
+    position: fixed;
+    display: flex;
+    justify-content: space-between;
+    height: 7rem;
+    width: 100vw;
+    animation: fadeIn 1.5s .3s ease-in backwards;
+
+    &-section {
+        display: flex;
+        align-items: center;
+        height: auto;
+        margin: 0 2rem;
+        white-space: nowrap;
+    }
+
+    &-logo {
+        height: 5rem;
+        margin-left: 0.2rem;
+
+        &-text {
+            font-weight: 100;
+            font-size: 2.4rem;
+            font-family: 'Oswald', serif;
+            text-transform: uppercase;
+            text-decoration: none;
+        }
+    }
+}
