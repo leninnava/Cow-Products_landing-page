@@ -1,2 +1,2 @@
 # Cow-Products_landing-page
-My first landing page proyect (!)
+A landing page about cows. 
