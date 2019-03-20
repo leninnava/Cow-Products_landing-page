@@ -1,10 +1,12 @@
+// Basic two-section grid container
+
 .grid-container {
     display: grid;
     grid-template-columns: 1fr 1fr;
     grid-template-rows: 1fr;
-    grid-template-areas: "Text-content Image-content";
+    grid-template-areas: "text-content image-content";
   }
   
-  .Text-content { grid-area: Text-content; }
+  .text-content { grid-area: text-content; }
   
-  .Image-content { grid-area: Image-content; }
+  .image-content { grid-area: image-content; }

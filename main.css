@@ -1,34 +1,8 @@
 /* General */
  
+    /* Separar cada clase entre base, modulos, states, layout y themes y colocarlos en sus archivos scss correspondiente
+    luego exportar cada uno a un archivo scss principal que luego se compila a CSS con sass -watch */
 
-/*
-*** Primary color:    
-
-   shade 0 = #521A00 = rgb( 82, 26,  0) = rgba( 82, 26,  0,1) = rgb0(0.322,0.102,0)
-   shade 1 = #A65936 = rgb(166, 89, 54) = rgba(166, 89, 54,1) = rgb0(0.651,0.349,0.212)
-   shade 2 = #793313 = rgb(121, 51, 19) = rgba(121, 51, 19,1) = rgb0(0.475,0.2,0.075)
-   shade 3 = #300F00 = rgb( 48, 15,  0) = rgba( 48, 15,  0,1) = rgb0(0.188,0.059,0)
-   shade 4 = #150700 = rgb( 21,  7,  0) = rgba( 21,  7,  0,1) = rgb0(0.082,0.027,0)
-
-*** Complement color:
-
-   shade 0 = #003722 = rgb(  0, 55, 34) = rgba(  0, 55, 34,1) = rgb0(0,0.216,0.133)
-   shade 1 = #247054 = rgb( 36,112, 84) = rgba( 36,112, 84,1) = rgb0(0.141,0.439,0.329)
-   shade 2 = #0D5238 = rgb( 13, 82, 56) = rgba( 13, 82, 56,1) = rgb0(0.051,0.322,0.22)
-   shade 3 = #002114 = rgb(  0, 33, 20) = rgba(  0, 33, 20,1) = rgb0(0,0.129,0.078)
-   shade 4 = #000E09 = rgb(  0, 14,  9) = rgba(  0, 14,  9,1) = rgb0(0,0.055,0.035)
-
-
-*** Grays
-    
-    --gray-light: #EFEFEF;
-    --gray-normal: #C1C1C1;
-    --gray-dark: #959393;
-  
-    Separar cada clase entre base, modulos, states, layout y themes y colocarlos en sus archivos scss correspondiente
-    luego exportar cada uno a un archivo scss principal que luego se compila a CSS con sass -watch
-
-*/
 
 @import url('https://fonts.googleapis.com/css?family=Oswald:300,400,700|Playfair+Display:400,700,900');
 
@@ -39,10 +13,11 @@
 *:after {
     margin: 0;
     padding: 0;
-    box-sizing: border-box;
+    box-sizing: inherit;
 }
 
 html {
+    box-sizing: border-box;
     font-size: 62.5%;
 }
 
@@ -119,7 +94,7 @@ a {
     white-space: nowrap;
     height: auto;
     padding: 2.5rem;
-    font-weight: 200;
+    font-weight: 600;
 }
 
 .btn::after {
@@ -138,14 +113,18 @@ a {
     transition: width 0.3s ease-in;
 }
 
+ /* Container, centers its child */
 
-.section {
-    height: 95vh;
+.container {
+    display: flex;
+    flex-flow: column;
+    justify-content: center;
+    align-items: center;
+
 }
 
 
-
-.section-header {
+.header {
     background: linear-gradient(to right bottom, rgba(187, 112, 70, 0.9), rgb(107, 43, 6)), url(img/stijn-te-strake-316914-unsplash.jpg);
     background-size: cover;
     background-position: left top;
@@ -153,30 +132,22 @@ a {
     /* Buscar una variación más clara del color de linear-gradient para que sea visible superpuesta a la imágen. */
 }
 
-.section-main {
-     
-} 
-
-.center-child {
-    display: flex;
-    flex-flow: column;
-    justify-content: center;
-    align-items: center;
- }
-
-.heading-container {
-    height: 95vh;
-    width: auto;
+.heading {
     animation: fadeIn 1.5s ease-in backwards;
 }
 
-.heading-container::after {
+.is-full-height {
+    height: 95vh;
+}
+
+.heading::after {
     content: "";
-    position: relative;
+    display: block;
+    margin: auto;
     border-bottom: solid 0.2rem;
     width: 20rem;
-    padding-bottom: 3.2rem;
-    justify-self: center;
+    padding-bottom: 3rem;
+   
 }
 
 .heading-text {
@@ -202,16 +173,16 @@ a {
 
 }
 
-.arrow-img {
-    height: auto;
-    width: 3rem;
+.arrow-animated {
     animation: beat 5s infinite;
 }
 
 
 
 
-
+.main {
+   background-color: rgba(37, 22, 5, 1);
+}
 
 /* Animations */
 
