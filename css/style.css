@@ -5,10 +5,11 @@
 *:after {
   margin: 0;
   padding: 0;
-  box-sizing: border-box;
+  box-sizing: inherit;
 }
 
 html {
+  box-sizing: border-box;
   font-size: 62.5%;
 }
 
@@ -21,19 +22,11 @@ a {
   color: inherit;
 }
 
-.grid-container {
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  grid-template-rows: 1fr;
-  grid-template-areas: "text-content image-content";
-}
-
-.text-content {
-  grid-area: Text-content;
-}
-
-.image-content {
-  grid-area: Image-content;
+.container {
+  display: flex;
+  flex-flow: column;
+  justify-content: center;
+  align-items: center;
 }
 
 .navbar {
@@ -64,11 +57,44 @@ a {
   text-decoration: none;
 }
 
-.container {
-  display: flex;
-  flex-flow: column;
-  justify-content: center;
-  align-items: center;
+.header {
+  background: linear-gradient(to right bottom, rgba(187, 112, 70, 0.9), #6b2b06), url(../../img/stijn-te-strake-316914-unsplash.jpg);
+  background-size: cover;
+  background-position: left top;
+  color: #f4f1bb;
+}
+
+.heading {
+  animation: fadeIn 1.5s ease-in backwards;
+}
+.heading::after {
+  content: "";
+  display: block;
+  margin: auto;
+  border-bottom: solid 0.2rem;
+  width: 20rem;
+  padding-bottom: 3rem;
+}
+.heading-text {
+  font-family: "Playfair Display", serif;
+  font-weight: 500;
+  text-align: center;
+  white-space: nowrap;
+  display: block;
+}
+.heading-sub {
+  font-size: 5.2rem;
+}
+.heading-primary {
+  font-size: 8rem;
+}
+
+.arrow {
+  justify-self: center;
+  animation: fadeIn 1.5s 0.6s ease-in backwards;
+}
+.arrow-animated {
+  animation: beat 5s infinite;
 }
 
 .btn {
@@ -95,12 +121,27 @@ a {
 }
 
 /* State*/
-.navbar__section--menutoggle {
-  display: flex;
-  flex-flow: column;
-  align-items: end;
+.is-full-height {
+  height: 95vh;
 }
 
+/* Animations */
+@keyframes beat {
+  0% {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(0.8);
+  }
+}
+@keyframes fadeIn {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
 /* Clasificar cada regla de css en sus respectivos archivos scss y aparecerán aquí */
 
 /*# sourceMappingURL=style.css.map */
