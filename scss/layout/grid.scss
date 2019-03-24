@@ -8,8 +8,10 @@
          "heading-text heading-text"
          "text-content image-content";
     height: inherit;
+    gap: 2rem;
     justify-content: center;
     align-items: center;
+    padding: 2rem;
   }
    
 .heading-text { grid-area: heading-text; }

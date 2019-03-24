@@ -15,11 +15,16 @@ html {
 
 body {
   font-family: "Playfair Display", serif;
-  background-color: #dbcfc0;
+  background-color: #c98a42;
 }
 
 a {
   color: inherit;
+}
+
+#how-it-works {
+  background: linear-gradient(to right bottom, rgba(187, 112, 70, 0.9), #6b2b06);
+  color: #f4f1bb;
 }
 
 .container {
@@ -39,8 +44,10 @@ a {
   grid-template-rows: 1fr 6fr;
   grid-template-areas: "heading-text heading-text" "text-content image-content";
   height: inherit;
+  gap: 2rem;
   justify-content: center;
   align-items: center;
+  padding: 2rem;
 }
 
 .heading-text {
@@ -144,6 +151,12 @@ a {
 .btn:hover::after {
   width: 100%;
   transition: width 0.3s ease-in;
+}
+
+.paragraph {
+  font-size: 3rem;
+  text-align: left;
+  margin: 4rem;
 }
 
 /* State*/
