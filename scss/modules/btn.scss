@@ -17,7 +17,7 @@
         height: .2rem;
     }
 
-    &::hover::after {
+    &:hover::after {
         width: 100%;
         transition: width 0.3s ease-in;
     }

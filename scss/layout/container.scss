@@ -8,6 +8,5 @@
 }
 
 .container-row {
-    @extend %container;
     flex-flow: row;
 }

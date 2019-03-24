@@ -3,10 +3,15 @@
 .grid-container {
     display: grid;
     grid-template-columns: 1fr 1fr;
-    grid-template-rows: 1fr;
-    grid-template-areas: "text-content image-content";
+    grid-template-rows: 1fr 6fr;
+        grid-template-areas:
+         "heading-text heading-text"
+         "text-content image-content";
+    height: inherit;
+    justify-content: center;
+    align-items: center;
   }
-  
-  .text-content { grid-area: text-content; }
-  
-  .image-content { grid-area: image-content; }
+   
+.heading-text { grid-area: heading-text; }
+.text-content { grid-area: text-content; }
+.image-content { grid-area: image-content; }

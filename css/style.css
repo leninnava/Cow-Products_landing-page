@@ -29,6 +29,32 @@ a {
   align-items: center;
 }
 
+.container-row {
+  flex-flow: row;
+}
+
+.grid-container {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: 1fr 6fr;
+  grid-template-areas: "heading-text heading-text" "text-content image-content";
+  height: inherit;
+  justify-content: center;
+  align-items: center;
+}
+
+.heading-text {
+  grid-area: heading-text;
+}
+
+.text-content {
+  grid-area: text-content;
+}
+
+.image-content {
+  grid-area: image-content;
+}
+
 .navbar {
   background-color: transparent;
   position: fixed;
@@ -58,7 +84,7 @@ a {
 }
 
 .header {
-  background: linear-gradient(to right bottom, rgba(187, 112, 70, 0.9), #6b2b06), url(../../img/stijn-te-strake-316914-unsplash.jpg);
+  background: linear-gradient(to right bottom, rgba(187, 112, 70, 0.9), #6b2b06), url(../img/header-background.jpg);
   background-size: cover;
   background-position: left top;
   color: #f4f1bb;
@@ -115,7 +141,7 @@ a {
   top: 0.4rem;
   height: 0.2rem;
 }
-.btn::hover::after {
+.btn:hover::after {
   width: 100%;
   transition: width 0.3s ease-in;
 }
