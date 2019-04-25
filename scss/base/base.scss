@@ -1,7 +1,5 @@
 // Base
 
-@import url('https://fonts.googleapis.com/css?family=Oswald:300,400,700|Playfair+Display:400,700,900');
-
 // Variables 
 
 
@@ -35,10 +33,21 @@ body {
 
 a {color: inherit;}
 
+#header { 
+    background: linear-gradient(to right bottom, rgba(187, 112, 70, 0.8), rgb(107, 43, 6)), url(../img/header-background.jpg);
+    background-size: cover;
+    background-position: left top;
+    color: rgba(244, 241, 187, 1); 
+}
+
 #how-it-works {
-    background: linear-gradient(to right bottom, rgba(187, 112, 70, 0.9), rgb(107, 43, 6));
+    background: linear-gradient(to left bottom, rgba(187, 112, 70, 0.9), rgb(107, 43, 6));
     color: $color2;
 }
 
+#products {
+    background-color: $color1;
+    color: $color4;
+}
 
 

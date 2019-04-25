@@ -1,0 +1,21 @@
+// Heading text module and submodules
+
+.heading {
+    font-family: "Playfair Display", serif;
+    font-weight: 500;
+    text-align: center;
+    white-space: nowrap;
+    display: block;
+    &-sub {font-size: 4rem;}
+    &-primary {font-size: 10rem;
+    text-align: left;
+    &:only-child {
+        background-color: #f4f1bb;
+        color: rgba(107, 43, 6, 0.75);
+        padding: 5rem;
+    }
+    &+ .heading-sub {padding-left: 8rem;}
+ }
+}
+ 
+

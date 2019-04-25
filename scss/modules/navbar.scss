@@ -1,6 +1,7 @@
 // Fixed, flex-based navbar and navbar sections 
 // (Responsive's broken, will be fixed on new mobile-first media queries rewrite)
 .navbar {
+    font-family: "Oswald", sans-serif;
     background-color: transparent;
     position: fixed;
     display: flex;
@@ -26,7 +27,6 @@
         &-text {
             font-weight: 100;
             font-size: 2.4rem;
-            font-family: 'Oswald', serif;
             text-transform: uppercase;
             text-decoration: none;
         }

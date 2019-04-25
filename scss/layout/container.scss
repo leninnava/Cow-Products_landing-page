@@ -1,12 +1,38 @@
-// Container, centers its child.
+// Container
 
 .container {
-    display: flex;
-    flex-flow: column;
-    justify-content: center;
-    align-items: center;
+    padding: 2rem;
+
+    &-flex {
+        display: flex;
+        height: 95%;
+        flex-flow: row;
+        justify-content: space-around;
+        align-items: center;
+    }
+
+    &-row {
+        display: flex;
+        flex-flow: row;
+        width: 95vw;
+        justify-content: space-around;
+    }
+    
+    &-grid {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        grid-template-rows: 1fr 6fr;
+            grid-template-areas:
+             "grid-section-heading grid-section-heading"
+             "grid-left-content grid-right-content";
+        height: inherit;
+        gap: 2rem;
+        justify-content: center;
+        align-items: center;
+      }
 }
 
-.container-row {
-    flex-flow: row;
-}
+.grid-section-heading { grid-area: grid-section-heading; }
+.grid-left-content { grid-area: grid-left-content; }
+.grid-right-content { grid-area: grid-right-content; }
+

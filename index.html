@@ -8,41 +8,45 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <script defer src="https://use.fontawesome.com/releases/v5.7.2/js/all.js"
         integrity="sha384-0pzryjIRos8mFBWMzSSZApWtPl/5++eIfzYmTgBBmXYdhvxPc+XcFEk+zJwDgWbP" crossorigin="anonymous">
-    </script>
+        </script>
     <link rel="stylesheet" type="text/css" media="screen" href="css/style.css">
+    <link rel="stylesheet"
+        href="https://fonts.googleapis.com/css?family=Oswald:300,400,700|Playfair+Display:400,700,900" rel="stylesheet">
 </head>
 
 <body>
-    <header class="header is-full-height">
+    <header id="header" class="is-full-height">
         <div class="navbar">
             <div class="navbar-section">
                 <a class="navbar-logo-text" href="">The Cowpenning</a>
                 <img class="navbar-logo" src="img/003-cow-silhouette.svg" alt="Cow silhouette">
             </div>
             <div class="navbar-section">
-                <a class="btn" href="">How cows work</a>
-                <a class="btn" href="">Products (from cows)</a>
+                <a class="btn" href="#how-it-works">How cows work</a>
+                <a class="btn" href="#products">Products</a>
                 <a class="btn" href="">Get in touch</a>
             </div>
         </div>
-        <div class="container is-full-height">
-            <div class="heading">
+            <div class="container-flex">
                 <h1>
-                    <span class="heading-text heading-primary"> Don't you <strong>love</strong></span>
-                    <span class="heading-text heading-sub">the smell of <strong>cow turd</strong></span>
-                    <span class="heading-text heading-sub"> in the morning.</span>
+                    <span class="heading heading-primary"> Don't you love</span>
+                    <span class="heading heading-sub">The smell of cow turd in the morning?</span>
+
+                </h1>
+                <h1 class="header-container">
+                    <span class="heading heading-primary ">We do.</span>
                 </h1>
             </div>
-            <i class="fas fa-arrow-down arrow-animated" style="position: relative; top: 9rem; font-size: 2rem;"></i>
-        </div>
+
     </header>
 
     <main class="main">
         <section id="how-it-works" class="is-full-height">
-            <div class="grid-container">
-                <h2 class="heading-text heading-sub">How they work.</h2>
-                <div class="left-content">
-                    <p class="paragraph">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Libero impedit asperiores totam
+            <div class="container-grid">
+                <h2 class="heading heading-sub grid-section-heading">How they work.</h2>
+                <div class="grid-left-content">
+                    <p class="paragraph">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Libero impedit
+                        asperiores totam
                         veritatis
                         numquam
                         laboriosam dolorum alias iure maxime! Nisi vitae mollitia reiciendis sit, molestiae consequuntur
@@ -50,14 +54,34 @@
                         distinctio adipisci illum.</p>
                 </div>
 
-                <div class="right-content">
-                        <iframe width="560" height="315" src="https://www.youtube.com/embed/lGwoOihpBOY" frameborder="0"
-                            allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"
-                            allowfullscreen></iframe>
+                <div class="grid-right-content">
+                    <iframe width="560" height="315" src="https://www.youtube.com/embed/lGwoOihpBOY" frameborder="0"
+                        allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"
+                        allowfullscreen></iframe>
                 </div>
             </div>
         </section>
-        <section id="products" class="is-full-height">
+        <section id="products" class="">
+            <div class="container is-full-height">
+            <h2 class="heading heading-sub">Stuff that comes from cows.</h2>
+            <div class="card-box">
+                <div class="card">
+                    <span class="card-title">Yogurt</span>
+                    <img src="" alt="" class="card-image">
+                    <p class="card-text"></p>
+                </div>
+                <div class="card">
+                    <span class="card-title">Cheese</span>
+                    <img src="" alt="" class="card-image">
+                    <p class="card-text"></p>
+                </div>
+                <div class="card">
+                    <span class="card-title">Milk</span>
+                    <img src="" alt="" class="card-image">
+                    <p class="card-text"></p>
+                </div>
+            </div>
+        </div>
             <!-- Haz que el módulo heading sea reusable y ponerlo aquí -->
         </section>
     </main>
