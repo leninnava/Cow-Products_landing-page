@@ -16,8 +16,9 @@
         flex-flow: row;
         width: 95vw;
         justify-content: space-around;
+        align-items: center;
     }
-    
+
     &-grid {
         display: grid;
         grid-template-columns: 1fr 1fr;
@@ -27,6 +28,7 @@
              "grid-left-content grid-right-content";
         height: inherit;
         gap: 2rem;
+        padding: 2rem;
         justify-content: center;
         align-items: center;
       }

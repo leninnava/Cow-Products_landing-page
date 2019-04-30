@@ -1,7 +1,6 @@
 // Base
 
-// Variables 
-
+// Variables
 
 // Palette
 
@@ -16,38 +15,56 @@ $color5: rgba(201, 138, 66, 1);
 *,
 *:before,
 *:after {
-    margin: 0;
-    padding: 0;
-    box-sizing: inherit;
+  margin: 0;
+  padding: 0;
+  box-sizing: inherit;
 }
 
 html {
-    box-sizing: border-box;
-    font-size: 62.5%;
+  box-sizing: border-box;
+  font-size: 62.5%;
 }
 
 body {
-    font-family: "Playfair Display", serif;
-    background-color: $color5;
+  font-family: "Playfair Display", serif;
+  background-color: $color5;
 }
 
-a {color: inherit;}
+a {
+  color: inherit;
+}
 
-#header { 
-    background: linear-gradient(to right bottom, rgba(187, 112, 70, 0.8), rgb(107, 43, 6)), url(../img/header-background.jpg);
-    background-size: cover;
-    background-position: left top;
-    color: rgba(244, 241, 187, 1); 
+#header {
+  background: linear-gradient(
+      to right bottom,
+      rgba(187, 112, 70, 0.8),
+      rgb(107, 43, 6)
+    ),
+    url(../img/header-background.jpg);
+  background-size: cover;
+  background-position: left top;
+  color: rgba(244, 241, 187, 1);
 }
 
 #how-it-works {
-    background: linear-gradient(to left bottom, rgba(187, 112, 70, 0.9), rgb(107, 43, 6));
-    color: $color2;
+  background: linear-gradient(
+    to right bottom,
+    rgba(187, 112, 70, 0.9),
+    rgb(107, 43, 6)
+  );
+  color: $color2;
 }
 
 #products {
-    background-color: $color1;
-    color: $color4;
+  background: linear-gradient(
+    to left bottom,
+    rgba(187, 112, 70, 0.9),
+    rgb(107, 43, 6)
+  );
+  color: $color2;
 }
 
-
+// #products {
+//     background: linear-gradient(to right, rgba(37, 22, 5, 1), rgba(49, 36, 20, 0.5));
+//     color: $color4;
+// }
