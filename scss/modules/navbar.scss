@@ -3,12 +3,14 @@
 .navbar {
     font-family: "Oswald", sans-serif;
     background-color: transparent;
+    color: $color2;
     position: fixed;
     display: flex;
     justify-content: space-between;
     height: 7rem;
     width: 100vw;
     animation: fadeIn 1.5s .3s ease-in backwards;
+    z-index: 1;
     
     //Navbar section containers. Usually two for left and right.
 

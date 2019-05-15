@@ -27,11 +27,15 @@ html {
 
 body {
   font-family: "Playfair Display", serif;
-  background-color: $color5;
+  background-color: $color2;
 }
 
 a {
   color: inherit;
+}
+
+#header, #products, #how-it-works {
+  height: 95vh;
 }
 
 #header {
@@ -44,6 +48,7 @@ a {
   background-size: cover;
   background-position: left top;
   color: rgba(244, 241, 187, 1);
+  clip-path: polygon(0 0, 100% 0, 100% 90%, 91% 100%, 0 100%);
 }
 
 #how-it-works {
@@ -53,15 +58,18 @@ a {
     rgb(107, 43, 6)
   );
   color: $color2;
+  margin-top: 4rem;
 }
 
 #products {
+  background: #01161e;
   background: linear-gradient(
-    to left bottom,
-    rgba(187, 112, 70, 0.9),
-    rgb(107, 43, 6)
-  );
+    to right bottom,
+    #01161e,
+    #034862);
   color: $color2;
+  margin-top: 4rem;
+
 }
 
 // #products {
