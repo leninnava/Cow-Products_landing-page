@@ -14,7 +14,7 @@ html {
 
 body {
   font-family: "Playfair Display", serif;
-  background-color: #f4f1bb;
+  background-color: #f1f0d6;
 }
 
 a {
@@ -27,22 +27,25 @@ a {
 
 #header {
   background: linear-gradient(to right bottom, rgba(187, 112, 70, 0.8), #6b2b06), url(../img/header-background.jpg);
+  color: #f1f0d6;
+  clip-path: polygon(0 0, 100% 0, 100% 90%, 91% 100%, 0 100%);
   background-size: cover;
   background-position: left top;
-  color: #f4f1bb;
-  clip-path: polygon(0 0, 100% 0, 100% 90%, 91% 100%, 0 100%);
 }
 
 #how-it-works {
-  background: linear-gradient(to right bottom, rgba(187, 112, 70, 0.9), #6b2b06);
-  color: #f4f1bb;
+  background: linear-gradient(to right bottom, rgba(187, 112, 70, 0.8), #6b2b0659), url(../img/cow-background-2.jpg);
+  background-size: cover;
+  background-position: left top;
+  color: #f1f0d6;
   margin-top: 4rem;
 }
 
 #products {
-  background: #01161e;
-  background: linear-gradient(to right bottom, #01161e, #034862);
-  color: #f4f1bb;
+  background: url(../img/cow-background.jpg);
+  background-size: cover;
+  background-position: left top;
+  color: #f1f0d6;
   margin-top: 4rem;
 }
 
@@ -94,7 +97,7 @@ a {
 .navbar {
   font-family: "Oswald", sans-serif;
   background-color: transparent;
-  color: #f4f1bb;
+  color: #f1f0d6;
   position: fixed;
   display: flex;
   justify-content: space-between;
@@ -127,12 +130,14 @@ a {
   text-align: left;
   white-space: nowrap;
   display: block;
-  color: #f4f1bb;
+  color: #f1f0d6;
 }
 .heading-sub {
   font-size: 4rem;
 }
 .heading-section {
+  font-family: "Lato", sans-serif;
+  text-transform: uppercase;
   display: flex;
   flex-flow: column;
   font-size: 5rem;
@@ -142,12 +147,12 @@ a {
 .heading-section-left {
   align-items: flex-start;
   padding-left: 1rem;
-  border-left: solid #f4f1bb 4rem;
+  border-left: solid #f1f0d6 4rem;
 }
 .heading-section-right {
   align-items: flex-end;
   padding-right: 1rem;
-  border-right: solid #f4f1bb 4rem;
+  border-right: solid #f1f0d6 4rem;
 }
 .heading-section > span {
   font-size: 2rem;
@@ -160,7 +165,7 @@ a {
   text-align: left;
 }
 .heading-primary:only-child {
-  background-color: #f4f1bb;
+  background-color: #f1f0d6;
   color: rgba(107, 43, 6, 0.75);
   padding: 5rem;
 }
@@ -181,7 +186,7 @@ a {
   content: "";
   display: block;
   position: relative;
-  background-color: #f4f1bb;
+  background-color: #f1f0d6;
   width: 0%;
   transition: width 0.3s ease-in;
   top: 0.4rem;
@@ -207,7 +212,7 @@ a {
   width: 20rem;
   height: 28rem;
   margin: 1rem;
-  background-color: bisque;
+  background-color: #f1f0d6;
 }
 
 .card-title {

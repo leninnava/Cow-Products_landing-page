@@ -6,11 +6,13 @@
   text-align: left;
   white-space: nowrap;
   display: block;
-  color: #f4f1bb;
+  color: $color2;
   &-sub {
     font-size: 4rem;
   }
   &-section {
+    font-family: "Lato", sans-serif;
+    text-transform: uppercase;
     display: flex;
     flex-flow: column;
     font-size: 5rem;
@@ -19,12 +21,12 @@
     &-left {
       align-items: flex-start;
       padding-left: 1rem;
-      border-left: solid #f4f1bb 4rem;
+      border-left: solid $color2 4rem;
     }
     &-right {
       align-items: flex-end;
       padding-right: 1rem;
-      border-right: solid #f4f1bb 4rem;
+      border-right: solid $color2 4rem;
     }
     & > span {
       font-size: 2rem;
@@ -37,7 +39,7 @@
     font-weight: 600;
     text-align: left;
     &:only-child {
-      background-color: #f4f1bb;
+      background-color: $color2;
       color: rgba(107, 43, 6, 0.75);
       padding: 5rem;
     }
