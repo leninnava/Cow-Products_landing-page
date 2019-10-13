@@ -5,11 +5,9 @@
   "main": "app.js",
   "dependencies": {},
   "devDependencies": {
-    "@fortawesome/fontawesome-free": "^5.8.1",
-    "sass": "^1.17.2"
+    
   },
   "scripts": {
-    "compile-sass": "sass --watch scss/style.scss:css/style.css"
   },
   "repository": {
     "type": "git",
