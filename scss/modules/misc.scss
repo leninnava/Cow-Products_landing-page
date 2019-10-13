@@ -1,8 +1,0 @@
-// Arrow with animated state
-
-.arrow {
-    justify-self: center;
-    animation: fadeIn 1.5s .6s ease-in backwards;
-
-    &-animated {animation: beat 5s infinite;}
-}
