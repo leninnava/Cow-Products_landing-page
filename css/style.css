@@ -7,7 +7,7 @@
   box-sizing: border-box;
   transition: all cubic-bezier(0.165, 0.84, 0.44, 1) 0.5s;
 } 
- 
+  
 html {
   box-sizing: border-box;
   font-size: 62.5%;
@@ -45,14 +45,14 @@ header {
   height: 95vh;
   display: flex;
   flex-flow: column;
-  justify-content: center;
+  justify-content: space-between;
 }
 
 .container-row {
   display: flex;
   flex-flow: row;
   width: 100%;
-  justify-content: space-around;
+  justify-content: space-evenly;
   align-items: center;
   padding: 0 2rem 0 2rem;
   height: 100%;
@@ -125,7 +125,6 @@ header {
   font-size: 4rem;
 }
 .heading-section {
-  text-transform: uppercase;
   display: flex;
   font-size: 5rem;
   font-weight: 500;
@@ -137,6 +136,7 @@ header {
 .heading-section > span {
   font-size: 2rem;
   font-weight: 300;
+  margin-left: 4rem;
 }
 .heading-primary {
   font-size: 10rem;
@@ -205,13 +205,13 @@ header {
 }
 
 .paragraph {
-  font-family: "Monserrat", serif;
-  font-size: 2.2rem;
+  font-size: 2.5rem;
   font-style: italic;
-  flex: 2;
   padding: 4rem;
   background: #9e5f3b;
-  margin: 5rem;
+  margin: 2rem;
+  text-align: justify;
+  font-weight: lighter;
 }
 
 .paragraph::first-letter {
@@ -232,13 +232,13 @@ footer {
 
 .footer-text {
   font-size: 2.4rem;
-
+  text-align: center;
+  padding: 2rem;
 }
 
 .form-inline {
  display: block;
  height: 5rem;
- 
 }
 
 input {
@@ -251,19 +251,37 @@ input {
   font-family: "Oswald", sans-serif;
 }
 
+input:hover {
+  background: #f1f0d6;
+  color: #9e5f3b;
+}
+
 @media (max-width: 1000px) {
   html {
     font-size: 50%;
   }
   
-  .container-row {
+  .container-row, footer {
     flex-flow: column;
   }
-
+ 
+  iframe {
+    height: auto;
+    width: auto;
+  }
   
 }
 @media (max-width: 750px) {
   html {
     font-size: 40%;
   }
+
+  footer {
+    height: 40vh;
+  }
+
+  .form-inline {
+    height: 8rem;
+  }
+  
 }
