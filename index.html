@@ -12,18 +12,15 @@
 </head>
 
 <body>
-    <nav class="navbar">
-        <div class="navbar-section">
-            <a class="navbar-logo-text" href="">The Cowpenning</a>
-        </div>
-        <div class="navbar-section">
-            <a class="btn" href="#how-it-works">How cows work</a>
-            <a class="btn" href="#products">Products</a>
-            <a class="btn" href="">Get in touch</a>
-        </div>
-    </nav>
-    <header id="header" class="">
-        <div class="container container-row">
+
+    <header class="container">
+        <nav class="navbar">
+            <a class="link" href="">The Cowpenning</a>
+            <a class="link" href="#how-it-works">How cows work</a>
+            <a class="link" href="#products">Products</a>
+            <a class="link" href="">Get in touch</a>
+        </nav>
+        <div class="container-row">
             <h1>
                 <span class="heading heading-primary"> Don't you love</span>
                 <span class="heading heading-sub">The smell of cow turd in the morning?</span>
@@ -33,59 +30,64 @@
                 <span class="heading heading-primary ">We do.</span>
             </h1>
         </div>
-
     </header>
+    <section id="how-it-works" class="container">
+        <h2 class="heading-section">How they work <br> <span class="heading-section-sub">Not
+                literally.</span></h2>
+        <div class="container-row">
 
-    <main class="main">
-        <section id="how-it-works" class="">
-            <div class="container">
-                <h2 class="heading heading-section heading-section-left">How they work <span class="heading-section-sub">Not literally.</span></h2>
 
-                <div class="container-row content">
-                    <p class="paragraph">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Libero impedit
-                        asperiores totam
-                        veritatis
-                        numquam
-                        laboriosam dolorum alias iure maxime! Nisi vitae mollitia reiciendis sit, molestiae consequuntur
-                        porro
-                        distinctio adipisci illum.</p>
+            <p class="paragraph">"Lorem ipsum, dolor sit amet consectetur adipisicing elit. Libero impedit
+                asperiores totam
+                veritatis
+                numquam
+                laboriosam dolorum alias iure maxime! Nisi vitae mollitia reiciendis sit, molestiae
+                consequuntur
+                porro
+                distinctio adipisci illum" -A Lorem ipsum generator.</p>
 
-                    <!-- <div class="">
-                        <iframe width="560" height="315" src="https://www.youtube.com/embed/lGwoOihpBOY" frameborder="0"
-                            allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"
-                            allowfullscreen></iframe>
-                    </div> -->
-                </div>
+            <div class="">
+                <iframe width="560" height="315" src="https://www.youtube.com/embed/lGwoOihpBOY" frameborder="0"
+                    allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"
+                    allowfullscreen></iframe>
             </div>
-        </section>
-        <section id="products" class="">
-            <div class="container">
-                <h2 class="heading heading-section heading-section-right">Products<span class="heading-section-sub">Stuff that comes from
-                        cows.</span></h2>
-                <div class="card-box">
-                    <div class="card">
-                        <span class="card-title">Yogurt</span>
-                        <img src="./img/Cepa-para-yogurt-contexto.jpg" alt="" class="card-image">
-                        <p class="card-text"></p>
-                    </div>
-                    <div class="card">
-                        <span class="card-title">Cheese</span>
-                        <img src="./img/smoked-gouda-blend-031080-1.jpg" alt="" class="card-image">
-                        <p class="card-text"></p>
-                    </div>
-                    <div class="card">
-                        <span class="card-title">Milk</span>
-                        <img src="./img/38641303596_30fe30ed17_h-624x467.jpg" alt="" class="card-image">
-                        <p class="card-text"></p>
-                    </div>
-                </div>
+        </div>
+    </section>
+    <section id="products" class="container">
+        <h2 class="heading-section">Products<span class="heading-section-sub">Stuff
+                that comes from
+                cows.</span></h2>
+        <div class="card-box">
+            <div class="card">
+                <span class="card-title">Yogurt</span>
+                <img src="./img/Cepa-para-yogurt-contexto.jpg" alt="" class="card-image">
+                <p class="card-text">More aged milk, "low-fat"</p>
             </div>
-            <!-- Haz que el módulo heading sea reusable y ponerlo aquí -->
-        </section>
-    </main>
+            <div class="card">
+                <span class="card-title">Cheese</span>
+                <img src="./img/smoked-gouda-blend-031080-1.jpg" alt="" class="card-image">
+                <p class="card-text">Aged milk, basically.</p>
+            </div>
+            <div class="card">
+                <span class="card-title">Milk</span>
+                <img src="./img/38641303596_30fe30ed17_h-624x467.jpg" alt="" class="card-image">
+                <p class="card-text">Yes.</p>
+            </div>
+        </div>
+
+        <!-- Haz que el módulo heading sea reusable y ponerlo aquí -->
+    </section>
     <footer>
-        <div class="footer" id="footer"></div>
+        <p class="footer-text">Give us your email and we'll make sure you stay informed with the latest cowformation.</p>
+        <form action="">
+            <div class="form-inline">
+            <label for="mail"></label>
+            <input type="email" name="mail" id="" placeholder="Your mail, human">
+            <input type="submit" value="Mooo, I say" class="">
+        </div>
+        </form>
     </footer>
+    </div>
 </body>
 <script src="app.js"></script>
 <!-- <script src="https://cdn.freecodecamp.org/testable-projects-fcc/v1/bundle.js"></script> -->
