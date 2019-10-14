@@ -1,0 +1,22 @@
+{
+  "name": "cows-landing-page",
+  "version": "1.0.0",
+  "description": "My first landing page proyect (!)",
+  "main": "app.js",
+  "dependencies": {},
+  "devDependencies": {
+    
+  },
+  "scripts": {
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/leninnava/Cow-Products_landing-page.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/leninnava/Cow-Products_landing-page/issues"
+  },
+  "homepage": "https://github.com/leninnava/Cow-Products_landing-page#readme"
+}

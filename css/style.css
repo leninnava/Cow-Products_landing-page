@@ -1,0 +1,269 @@
+@charset "UTF-8";
+*,
+*:before,
+*:after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  transition: all cubic-bezier(0.165, 0.84, 0.44, 1) 0.5s;
+} 
+ 
+html {
+  box-sizing: border-box;
+  font-size: 62.5%;
+}
+
+body {
+  font-family: "Oswald", sans-serif;
+  background-color: #f1f0d6;
+  color: #f1f0d6;
+  padding: 1rem;
+}
+
+section {
+  background-size: cover;
+  background-position: left top;
+  margin-top: 1rem;
+}
+
+header {
+  background-image: linear-gradient(to right bottom, rgba(187, 112, 70, 0.8), #6b2b0659), url(../img/header-background.jpg);
+  background-size: cover;
+  background-position: left top;
+  transition: none;
+}
+
+#how-it-works {
+  background-image: linear-gradient(to right bottom, rgba(187, 112, 70, 0.8), #6b2b0659), url(../img/cow-background-2.jpg);
+}
+
+#products {
+  background-image: linear-gradient(to right bottom, rgba(187, 112, 70, 0.8), #6b2b0659), url(../img/cow-background.jpg);
+}
+
+.container {
+  height: 95vh;
+  display: flex;
+  flex-flow: column;
+  justify-content: center;
+}
+
+.container-row {
+  display: flex;
+  flex-flow: row;
+  width: 100%;
+  justify-content: space-around;
+  align-items: center;
+  padding: 0 2rem 0 2rem;
+  height: 100%;
+}
+
+
+/* Navbar */
+.navbar {
+ 
+  background: transparent;
+  font-size: 2.4rem;
+  display: flex;
+  width: 100%;
+  flex-direction: row;
+  justify-content: space-between;
+  height: 6rem;
+  padding: 1rem;
+  z-index: 1;
+}
+
+.navbar > a {
+  align-items: center;
+  display: flex;
+  color: #f1f0d6;
+  margin-right: 1rem;
+  padding: 1rem;
+}
+
+.navbar > a:hover {
+  background: #f1f0d6;
+  color: #9e5f3b;
+  
+}
+
+.navbar > a:first-child {
+  flex: 2;
+  font-weight: bold;
+}
+
+.navbar > a:last-child {
+  margin-right: 0;
+}
+
+.fixed .navbar {
+  background: #9e5f3b;
+  position: fixed;
+  width: calc(100% - 2rem);
+  top: 0;
+  padding: 0 2rem 0 2rem;
+}
+
+.navbar-section {
+  display: flex;
+  align-items: center;
+  height: auto;
+  margin: 0 2rem;
+  white-space: nowrap;
+}
+
+/* Heading */
+.heading {
+  font-family: "Oswald", sans-serif;
+  font-weight: 500;
+  text-align: left;
+  white-space: nowrap;
+  display: block;
+  color: #f1f0d6;
+}
+.heading-sub {
+  font-size: 4rem;
+}
+.heading-section {
+  text-transform: uppercase;
+  display: flex;
+  font-size: 5rem;
+  font-weight: 500;
+  margin-left: 2rem;
+  flex-flow: column;
+}
+
+
+.heading-section > span {
+  font-size: 2rem;
+  font-weight: 300;
+}
+.heading-primary {
+  font-size: 10rem;
+  font-weight: 500;
+  text-align: left;
+}
+.heading-primary:only-child {
+  background-color: #f1f0d6;
+  color: #9e5f3b;
+  padding: 5rem;
+}
+.heading-primary + .heading-sub {
+  padding-left: 8rem;
+}
+
+.link {
+  text-decoration: none;
+  text-transform: uppercase;
+  font-weight: 500;
+}
+.link::after {
+  content: "";
+  display: block;
+  position: relative;
+  background-color: #f1f0d6;
+  width: 0%;
+  transition: width 0.3s ease-in;
+  top: 0.4rem;
+  height: 0.2rem;
+}
+
+.card-box {
+  display: flex;
+  height: 85%;
+  flex-flow: row;
+  flex-wrap: wrap;
+  justify-content: space-evenly;
+  align-items: center;
+}
+
+.card {
+  display: flex;
+  flex-flow: column;
+  width: 20rem;
+  height: 28rem;
+  margin: 1rem;
+  background: #9e5f3b;
+}
+
+.card-title {
+  justify-content: center;
+  align-items: center;
+  height: 4rem;
+  font-size: 2rem;
+  display: flex;
+}
+
+.card-image {
+  height: 10rem;
+}
+
+.card-text {
+  height: 6rem;
+  margin: 1rem 1rem;
+  font-size: 2rem;
+}
+
+.paragraph {
+  font-family: "Monserrat", serif;
+  font-size: 2.2rem;
+  font-style: italic;
+  flex: 2;
+  padding: 4rem;
+  background: #9e5f3b;
+  margin: 5rem;
+}
+
+.paragraph::first-letter {
+  font-size: 4rem;
+  font-weight: bold;
+}
+
+
+
+footer {
+  display: flex;
+  flex-flow: row;
+  justify-content: space-evenly;
+  align-items: center;
+  height: 25vh;
+  background: #3b2214;
+}
+
+.footer-text {
+  font-size: 2.4rem;
+
+}
+
+.form-inline {
+ display: block;
+ height: 5rem;
+ 
+}
+
+input {
+  border: none;
+  background: #9e5f3b;
+  height: inherit;
+  font-size: 2.4rem;
+  padding: 0 1rem 0 1rem;
+  color: #f1f0d6;
+  font-family: "Oswald", sans-serif;
+}
+
+@media (max-width: 1000px) {
+  html {
+    font-size: 50%;
+  }
+  
+  .container-row {
+    flex-flow: column;
+  }
+
+  
+}
+@media (max-width: 750px) {
+  html {
+    font-size: 40%;
+  }
+}
