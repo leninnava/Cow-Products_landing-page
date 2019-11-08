@@ -1,4 +1,7 @@
 @charset "UTF-8";
+
+
+
 *,
 *:before,
 *:after {
@@ -6,8 +9,11 @@
   padding: 0;
   box-sizing: border-box;
   transition: all cubic-bezier(0.165, 0.84, 0.44, 1) 0.5s;
+  --box-padding: 2rem;
+  --box-margin: 2rem;
+  
 } 
- 
+   
 html {
   box-sizing: border-box;
   font-size: 62.5%;
@@ -17,7 +23,7 @@ body {
   font-family: "Oswald", sans-serif;
   background-color: #f1f0d6;
   color: #f1f0d6;
-  padding: 1rem;
+  margin: 1rem;
 }
 
 section {
@@ -33,6 +39,10 @@ header {
   transition: none;
 }
 
+header > img {
+  display: none;
+}
+
 #how-it-works {
   background-image: linear-gradient(to right bottom, rgba(187, 112, 70, 0.8), #6b2b0659), url(../img/cow-background-2.jpg);
 }
@@ -41,35 +51,43 @@ header {
   background-image: linear-gradient(to right bottom, rgba(187, 112, 70, 0.8), #6b2b0659), url(../img/cow-background.jpg);
 }
 
+/* Repeated code flag */
+
 .container {
   height: 95vh;
   display: flex;
   flex-flow: column;
-  justify-content: center;
+  justify-content: space-evenly;
+  align-items: center;
 }
 
-.container-row {
+/* You're using nested containers with a confusing name */
+
+.row {
   display: flex;
   flex-flow: row;
-  width: 100%;
-  justify-content: space-around;
+  width: auto;
+  justify-content: space-evenly;
   align-items: center;
-  padding: 0 2rem 0 2rem;
-  height: 100%;
 }
+
+.column {
+  flex-flow: column;
+}
+
+
 
 
 /* Navbar */
 .navbar {
  
   background: transparent;
-  font-size: 2.4rem;
+  font-size: 2rem;
   display: flex;
   width: 100%;
   flex-direction: row;
   justify-content: space-between;
   height: 6rem;
-  padding: 1rem;
   z-index: 1;
 }
 
@@ -77,8 +95,8 @@ header {
   align-items: center;
   display: flex;
   color: #f1f0d6;
-  margin-right: 1rem;
-  padding: 1rem;
+  margin-right: var(--box-margin);
+  padding: var(--box-padding);
 }
 
 .navbar > a:hover {
@@ -90,6 +108,7 @@ header {
 .navbar > a:first-child {
   flex: 2;
   font-weight: bold;
+  text-transform: uppercase;
 }
 
 .navbar > a:last-child {
@@ -101,7 +120,7 @@ header {
   position: fixed;
   width: calc(100% - 2rem);
   top: 0;
-  padding: 0 2rem 0 2rem;
+  box-shadow: 0px 1px 9px rgba(0, 0, 0, 0.20);
 }
 
 .navbar-section {
@@ -110,6 +129,19 @@ header {
   height: auto;
   margin: 0 2rem;
   white-space: nowrap;
+}
+
+.burger{
+  fill: #f1f0d6;
+  display: block;
+  width: 8rem;
+  height: inherit;
+  padding: 1rem;
+}
+
+.burger:hover {
+  fill: #9e5f3b;
+  background: #f1f0d6;
 }
 
 /* Heading */
@@ -125,55 +157,53 @@ header {
   font-size: 4rem;
 }
 .heading-section {
-  text-transform: uppercase;
   display: flex;
-  font-size: 5rem;
-  font-weight: 500;
-  margin-left: 2rem;
+  font-size: 4rem;
+  font-weight: 600;
   flex-flow: column;
+  align-items: start;
+  background: #9e5f3b;
+  padding: var(--box-padding);
+  margin-top: var(--box-margin);
+  box-shadow: 0px 1px 9px rgba(0, 0, 0, 0.20);
 }
 
 
 .heading-section > span {
-  font-size: 2rem;
+  font-size: 3rem;
   font-weight: 300;
 }
 .heading-primary {
   font-size: 10rem;
-  font-weight: 500;
+  font-weight: 600;
   text-align: left;
 }
 .heading-primary:only-child {
   background-color: #f1f0d6;
   color: #9e5f3b;
-  padding: 5rem;
+  padding: 4rem;
+  box-shadow: 0px 1px 9px rgba(0, 0, 0, 0.20);
+  font-weight: 300;
 }
+/* Find a better way to code this, it shifs on media query activation unless you hard-code it */
 .heading-primary + .heading-sub {
-  padding-left: 8rem;
+  padding-left: 6rem;
 }
 
-.link {
+.nav-link {
   text-decoration: none;
   text-transform: uppercase;
   font-weight: 500;
+  white-space: nowrap;
 }
-.link::after {
-  content: "";
-  display: block;
-  position: relative;
-  background-color: #f1f0d6;
-  width: 0%;
-  transition: width 0.3s ease-in;
-  top: 0.4rem;
-  height: 0.2rem;
-}
+
 
 .card-box {
   display: flex;
-  height: 85%;
+  height: auto;
   flex-flow: row;
   flex-wrap: wrap;
-  justify-content: space-evenly;
+  justify-content: center;
   align-items: center;
 }
 
@@ -182,16 +212,18 @@ header {
   flex-flow: column;
   width: 20rem;
   height: 28rem;
-  margin: 1rem;
+  margin: var(--box-margin);
   background: #9e5f3b;
+  box-shadow: 0px 1px 9px rgba(0, 0, 0, 0.20);
+  transition: none;
 }
 
 .card-title {
-  justify-content: center;
-  align-items: center;
   height: 4rem;
-  font-size: 2rem;
+  font-size: 3rem;
   display: flex;
+  font-weight: bold;
+  margin: var(--box-padding);
 }
 
 .card-image {
@@ -200,23 +232,32 @@ header {
 
 .card-text {
   height: 6rem;
-  margin: 1rem 1rem;
+  margin: var(--box-margin);
   font-size: 2rem;
+  text-align: center;
+  font-weight: 300;
 }
 
 .paragraph {
-  font-family: "Monserrat", serif;
-  font-size: 2.2rem;
-  font-style: italic;
-  flex: 2;
-  padding: 4rem;
-  background: #9e5f3b;
-  margin: 5rem;
+  font-size: 2rem;
+  padding: var(--box-padding);
+  background: #f1f0d6;
+  margin: 2rem;
+  text-align: justify;
+  font-weight: lighter;
+  width: 40rem;
+  box-shadow: 0px 1px 9px rgba(0, 0, 0, 0.20);
+  color: #9e5f3b;
 }
 
-.paragraph::first-letter {
+.capitalize {
   font-size: 4rem;
   font-weight: bold;
+}
+
+.author {
+  font-style: normal;
+  font-weight: 700;
 }
 
 
@@ -226,44 +267,112 @@ footer {
   flex-flow: row;
   justify-content: space-evenly;
   align-items: center;
-  height: 25vh;
+  height: 35vh;
   background: #3b2214;
 }
 
-.footer-text {
-  font-size: 2.4rem;
+.footer-container {
+  display: flex;
+  flex: 1;
+  flex-flow: column;
+  align-items: center;
+  justify-content: center;
+  padding: var(--box-padding);
+}
 
+
+.footer-text {
+  font-size: 2rem;
+  text-align: center;
 }
 
 .form-inline {
  display: block;
- height: 5rem;
- 
+ height: 6rem;
+ margin: var(--box-margin);
 }
 
 input {
   border: none;
   background: #9e5f3b;
   height: inherit;
-  font-size: 2.4rem;
-  padding: 0 1rem 0 1rem;
+  font-size: 2rem;
   color: #f1f0d6;
   font-family: "Oswald", sans-serif;
+  padding: 0 var(--box-padding);
+  box-shadow: 0px 1px 9px rgba(0, 0, 0, 0.20);
+}
+
+input:hover {
+  background: #f1f0d6;
+  color: #9e5f3b;
+}
+
+iframe {
+  margin: var(--box-margin);
 }
 
 @media (max-width: 1000px) {
+  
+   footer {
+    flex-flow: column;
+  }
+ 
+  iframe {
+    height: auto;
+    width: auto;
+    box-shadow: 0px 1px 9px rgba(0, 0, 0, 0.20);
+  }
+  
+}
+@media (max-width: 856px) {
   html {
     font-size: 50%;
   }
-  
-  .container-row {
+ 
+  footer {
+    height: 40vh;
+  }
+
+  .form-inline {
+    height: 8rem;
+  }
+
+  .row {
     flex-flow: column;
   }
 
+  .card {
+    flex-flow: row;
+    width: 100%;
+    height: auto;
+  }
+
+  .card-box {
+    flex-wrap: nowrap;
+    flex-flow: column;
+  }
+
+  .navbar > a {
+    display: none;
+  }
   
+  .burger {
+    display: block;
+
+  }
 }
-@media (max-width: 750px) {
-  html {
-    font-size: 40%;
+
+@media (max-width: 500px) {
+  .heading-primary {
+    font-size: 8rem;
+    text-align: center;
+  }
+  .heading-sub {
+    font-size: 3rem;
+    text-align: center;
+  }
+  .heading-primary + .heading-sub {
+    padding: 0;
   }
 }
